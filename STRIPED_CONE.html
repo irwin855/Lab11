@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Striped Cone
+    </title>
+    <head>
+</head>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="1000" height="1000">
+    </canvas>
+
+    <script>
+    function draw()
+    {
+      var sketch = document.getElementById('sketch');
+      var context = sketch.getContext("2d");
+      for (var i = 1; i <= 40; i++)
+      for (var b = 1; b <= 32; b++)
+      {
+        if (i%2===0) {
+context.fillStyle="#404040"
+context.beginPath();
+context.arc(i*10,i*10,b*i/6,0,2*Math.PI,true);
+context.closePath()
+context.fill()
+  }
+  else {
+    context.fillStyle="red"
+    context.beginPath();
+    context.arc(i*10,i*10,b*i/6,0,2*Math.PI,true);
+    context.closePath()
+    context.fill()
+  }
+}
+}
+    </script>
+  </body>
+</html>

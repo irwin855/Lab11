@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <head>
+<link rel="stylesheet" type="text/css" href="page.css">
+</head>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="1500" height="1000">
+    </canvas>
+
+    <script>
+    function draw()
+    {
+      var sketch = document.getElementById('sketch');
+      var context = sketch.getContext("2d");
+    for (var i = 1; i <= 4; i++)
+    for (var b = 1; b <= 7; b++)
+    {
+      context.fillStyle = "yellow"
+      context.beginPath();
+      context.arc(i*50, b*50 , 20 , 0, 2 * Math.PI , true);
+      context.closePath();
+      context.fill();
+    }
+  }
+    </script>
+  </body>
+</html>

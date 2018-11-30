@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Diag Circ
+    </title>
+    <head>
+</head>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="1000" height="1000">
+    </canvas>
+
+    <script>
+    function draw()
+    {
+      var sketch = document.getElementById('sketch');
+      var context = sketch.getContext("2d");
+      for (var i = 1; i <= 18; i++)
+      {
+        if (i%2===0) {
+context.beginPath();
+context.arc(i*25,i*25,30,0,2*Math.PI,true);
+context.closePath()
+context.fill()
+  }
+}
+}
+    </script>
+  </body>
+</html>

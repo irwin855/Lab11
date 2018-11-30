@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <head>
+<link rel="stylesheet" type="text/css" href="page.css">
+</head>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="10000" height="10000">
+    </canvas>
+
+    <script>
+
+function draw()
+{
+  var row = prompt("How many circles do you want in a row?")
+  var x = parseInt(row)
+  var sketch = document.getElementById('sketch');
+  var context = sketch.getContext("2d");
+  for (var i = 1; i <= x; i++)
+  {
+    context.fillStyle = "yellow"
+    context.beginPath();
+    context.arc(100, i * 100 , 25 , 0, 2 * Math.PI , true);
+    context.closePath();
+    context.fill();
+  }
+
+}
+
+    </script>
+  </body>
+</html>
